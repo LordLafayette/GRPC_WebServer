@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package filesteam;
+
+service PushFileServiceName{
+  rpc PushFile (stream fileBuffer) returns (fileBufferResponse);
+}
+
+message fileBuffer {
+  bytes Buffer =1;
+}
+
+message fileBufferResponse{
+  int32 Receive = 1;
+}
