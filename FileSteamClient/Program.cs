@@ -15,7 +15,7 @@ namespace FileSteamClient
         public class FileSteamClient
         {
             readonly FileSteamService.FileSteamServiceClient _client;
-            
+            const int BUFFER_SIZE = 256;
             public FileSteamClient(FileSteamService.FileSteamServiceClient client)
             {
                 _client = client;
@@ -31,7 +31,7 @@ namespace FileSteamClient
                         {
                             Console.WriteLine("file size :" + (fs.Length / (float)1024) + " MB");
                             var bufferReaded = 0;
-                            var buffer = new byte[255];
+                            var buffer = new byte[BUFFER_SIZE];
                             while((bufferReaded = fs.Read(buffer, 0, buffer.Length)) != 0){
                                 Console.WriteLine("byte sent " + bufferReaded);
                                 var byteString = ByteString.CopyFrom(bufferReaded<buffer.Length?buffer.Take(bufferReaded).ToArray():buffer);
