@@ -63,6 +63,7 @@ namespace FileSteamClient
             Console.ReadLine();
             Console.WriteLine("enter");
 
+            task.Wait();
             channel.ShutdownAsync().Wait();
             Console.ReadLine();
         }
