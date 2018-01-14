@@ -22,15 +22,15 @@ namespace Filesteam {
     static FileSteamReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChBmaWxlX3N0ZWFtLnByb3RvEglmaWxlc3RlYW0iHAoKZmlsZUJ1ZmZlchIO",
-            "CgZCdWZmZXIYASABKAwiJQoSZmlsZUJ1ZmZlclJlc3BvbnNlEg8KB1JlY2Vp",
-            "dmUYASABKAUyVgoQRmlsZVN0ZWFtU2VydmljZRJCCghQdXNoRmlsZRIVLmZp",
-            "bGVzdGVhbS5maWxlQnVmZmVyGh0uZmlsZXN0ZWFtLmZpbGVCdWZmZXJSZXNw",
-            "b25zZSgBYgZwcm90bzM="));
+            "ChBmaWxlX3N0ZWFtLnByb3RvEglmaWxlc3RlYW0iLgoKZmlsZUJ1ZmZlchIO",
+            "CgZCdWZmZXIYASABKAwSEAoIRmlsZU5hbWUYAiABKAkiJQoSZmlsZUJ1ZmZl",
+            "clJlc3BvbnNlEg8KB1JlY2VpdmUYASABKAUyVgoQRmlsZVN0ZWFtU2Vydmlj",
+            "ZRJCCghQdXNoRmlsZRIVLmZpbGVzdGVhbS5maWxlQnVmZmVyGh0uZmlsZXN0",
+            "ZWFtLmZpbGVCdWZmZXJSZXNwb25zZSgBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Filesteam.fileBuffer), global::Filesteam.fileBuffer.Parser, new[]{ "Buffer" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Filesteam.fileBuffer), global::Filesteam.fileBuffer.Parser, new[]{ "Buffer", "FileName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Filesteam.fileBufferResponse), global::Filesteam.fileBufferResponse.Parser, new[]{ "Receive" }, null, null, null)
           }));
     }
@@ -63,6 +63,7 @@ namespace Filesteam {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public fileBuffer(fileBuffer other) : this() {
       buffer_ = other.buffer_;
+      fileName_ = other.fileName_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -81,6 +82,17 @@ namespace Filesteam {
       }
     }
 
+    /// <summary>Field number for the "FileName" field.</summary>
+    public const int FileNameFieldNumber = 2;
+    private string fileName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string FileName {
+      get { return fileName_; }
+      set {
+        fileName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as fileBuffer);
@@ -95,6 +107,7 @@ namespace Filesteam {
         return true;
       }
       if (Buffer != other.Buffer) return false;
+      if (FileName != other.FileName) return false;
       return true;
     }
 
@@ -102,6 +115,7 @@ namespace Filesteam {
     public override int GetHashCode() {
       int hash = 1;
       if (Buffer.Length != 0) hash ^= Buffer.GetHashCode();
+      if (FileName.Length != 0) hash ^= FileName.GetHashCode();
       return hash;
     }
 
@@ -116,6 +130,10 @@ namespace Filesteam {
         output.WriteRawTag(10);
         output.WriteBytes(Buffer);
       }
+      if (FileName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(FileName);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,6 +141,9 @@ namespace Filesteam {
       int size = 0;
       if (Buffer.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Buffer);
+      }
+      if (FileName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FileName);
       }
       return size;
     }
@@ -134,6 +155,9 @@ namespace Filesteam {
       }
       if (other.Buffer.Length != 0) {
         Buffer = other.Buffer;
+      }
+      if (other.FileName.Length != 0) {
+        FileName = other.FileName;
       }
     }
 
@@ -147,6 +171,10 @@ namespace Filesteam {
             break;
           case 10: {
             Buffer = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            FileName = input.ReadString();
             break;
           }
         }

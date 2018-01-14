@@ -8,6 +8,7 @@ service FileSteamService{
 
 message fileBuffer {
   bytes Buffer =1;
+  string FileName = 2;
 }
 
 message fileBufferResponse{

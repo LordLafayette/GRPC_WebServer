@@ -5,7 +5,12 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSteamGRPC", "FileSteamGRPC\FileSteamGRPC.csproj", "{C64BC982-D895-4591-B653-75056F2B89C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSteamServer", "FileSteamServer\FileSteamServer.csproj", "{D2D48A74-15AD-4CCD-B900-626F12F3EEF5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSteamWebServer", "FileSteamWebServer\FileSteamWebServer.csproj", "{5834539A-3CFD-49E7-B9F0-760ED3AAEA34}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C64BC982-D895-4591-B653-75056F2B89C6} = {C64BC982-D895-4591-B653-75056F2B89C6}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSteamClient", "FileSteamClient\FileSteamClient.csproj", "{05D7F2E8-EC0D-42A8-BB80-85F0C0E7C396}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +22,14 @@ Global
 		{C64BC982-D895-4591-B653-75056F2B89C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C64BC982-D895-4591-B653-75056F2B89C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C64BC982-D895-4591-B653-75056F2B89C6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D2D48A74-15AD-4CCD-B900-626F12F3EEF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D2D48A74-15AD-4CCD-B900-626F12F3EEF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D2D48A74-15AD-4CCD-B900-626F12F3EEF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D2D48A74-15AD-4CCD-B900-626F12F3EEF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5834539A-3CFD-49E7-B9F0-760ED3AAEA34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5834539A-3CFD-49E7-B9F0-760ED3AAEA34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5834539A-3CFD-49E7-B9F0-760ED3AAEA34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5834539A-3CFD-49E7-B9F0-760ED3AAEA34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05D7F2E8-EC0D-42A8-BB80-85F0C0E7C396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05D7F2E8-EC0D-42A8-BB80-85F0C0E7C396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05D7F2E8-EC0D-42A8-BB80-85F0C0E7C396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05D7F2E8-EC0D-42A8-BB80-85F0C0E7C396}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

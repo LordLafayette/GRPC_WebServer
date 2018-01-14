@@ -32,7 +32,7 @@ namespace Filesteam {
     /// <summary>Base class for server-side implementations of FileSteamService</summary>
     public abstract partial class FileSteamServiceBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::Filesteam.fileBufferResponse> PushFile(grpc::IAsyncStreamReader<global::Filesteam.fileBuffer> requestStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Filesteam.fileBufferResponse> PushFileAsync(grpc::IAsyncStreamReader<global::Filesteam.fileBuffer> requestStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -82,7 +82,7 @@ namespace Filesteam {
     public static grpc::ServerServiceDefinition BindService(FileSteamServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_PushFile, serviceImpl.PushFile).Build();
+          .AddMethod(__Method_PushFile, serviceImpl.PushFileAsync).Build();
     }
 
   }
