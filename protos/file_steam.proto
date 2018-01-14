@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package filesteam;
 
-service PushFileServiceName{
+service FileSteamService{
   rpc PushFile (stream fileBuffer) returns (fileBufferResponse);
 }
 

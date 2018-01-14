@@ -24,9 +24,9 @@ namespace Filesteam {
           string.Concat(
             "ChBmaWxlX3N0ZWFtLnByb3RvEglmaWxlc3RlYW0iHAoKZmlsZUJ1ZmZlchIO",
             "CgZCdWZmZXIYASABKAwiJQoSZmlsZUJ1ZmZlclJlc3BvbnNlEg8KB1JlY2Vp",
-            "dmUYASABKAUyWQoTUHVzaEZpbGVTZXJ2aWNlTmFtZRJCCghQdXNoRmlsZRIV",
-            "LmZpbGVzdGVhbS5maWxlQnVmZmVyGh0uZmlsZXN0ZWFtLmZpbGVCdWZmZXJS",
-            "ZXNwb25zZSgBYgZwcm90bzM="));
+            "dmUYASABKAUyVgoQRmlsZVN0ZWFtU2VydmljZRJCCghQdXNoRmlsZRIVLmZp",
+            "bGVzdGVhbS5maWxlQnVmZmVyGh0uZmlsZXN0ZWFtLmZpbGVCdWZmZXJSZXNw",
+            "b25zZSgBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

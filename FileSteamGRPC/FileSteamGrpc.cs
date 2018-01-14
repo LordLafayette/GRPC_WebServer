@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 using grpc = global::Grpc.Core;
 
 namespace Filesteam {
-  public static partial class PushFileServiceName
+  public static partial class FileSteamService
   {
-    static readonly string __ServiceName = "filesteam.PushFileServiceName";
+    static readonly string __ServiceName = "filesteam.FileSteamService";
 
     static readonly grpc::Marshaller<global::Filesteam.fileBuffer> __Marshaller_fileBuffer = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Filesteam.fileBuffer.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Filesteam.fileBufferResponse> __Marshaller_fileBufferResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Filesteam.fileBufferResponse.Parser.ParseFrom);
@@ -29,8 +29,8 @@ namespace Filesteam {
       get { return global::Filesteam.FileSteamReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Base class for server-side implementations of PushFileServiceName</summary>
-    public abstract partial class PushFileServiceNameBase
+    /// <summary>Base class for server-side implementations of FileSteamService</summary>
+    public abstract partial class FileSteamServiceBase
     {
       public virtual global::System.Threading.Tasks.Task<global::Filesteam.fileBufferResponse> PushFile(grpc::IAsyncStreamReader<global::Filesteam.fileBuffer> requestStream, grpc::ServerCallContext context)
       {
@@ -39,26 +39,26 @@ namespace Filesteam {
 
     }
 
-    /// <summary>Client for PushFileServiceName</summary>
-    public partial class PushFileServiceNameClient : grpc::ClientBase<PushFileServiceNameClient>
+    /// <summary>Client for FileSteamService</summary>
+    public partial class FileSteamServiceClient : grpc::ClientBase<FileSteamServiceClient>
     {
-      /// <summary>Creates a new client for PushFileServiceName</summary>
+      /// <summary>Creates a new client for FileSteamService</summary>
       /// <param name="channel">The channel to use to make remote calls.</param>
-      public PushFileServiceNameClient(grpc::Channel channel) : base(channel)
+      public FileSteamServiceClient(grpc::Channel channel) : base(channel)
       {
       }
-      /// <summary>Creates a new client for PushFileServiceName that uses a custom <c>CallInvoker</c>.</summary>
+      /// <summary>Creates a new client for FileSteamService that uses a custom <c>CallInvoker</c>.</summary>
       /// <param name="callInvoker">The callInvoker to use to make remote calls.</param>
-      public PushFileServiceNameClient(grpc::CallInvoker callInvoker) : base(callInvoker)
+      public FileSteamServiceClient(grpc::CallInvoker callInvoker) : base(callInvoker)
       {
       }
       /// <summary>Protected parameterless constructor to allow creation of test doubles.</summary>
-      protected PushFileServiceNameClient() : base()
+      protected FileSteamServiceClient() : base()
       {
       }
       /// <summary>Protected constructor to allow creation of configured clients.</summary>
       /// <param name="configuration">The client configuration.</param>
-      protected PushFileServiceNameClient(ClientBaseConfiguration configuration) : base(configuration)
+      protected FileSteamServiceClient(ClientBaseConfiguration configuration) : base(configuration)
       {
       }
 
@@ -71,15 +71,15 @@ namespace Filesteam {
         return CallInvoker.AsyncClientStreamingCall(__Method_PushFile, null, options);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
-      protected override PushFileServiceNameClient NewInstance(ClientBaseConfiguration configuration)
+      protected override FileSteamServiceClient NewInstance(ClientBaseConfiguration configuration)
       {
-        return new PushFileServiceNameClient(configuration);
+        return new FileSteamServiceClient(configuration);
       }
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static grpc::ServerServiceDefinition BindService(PushFileServiceNameBase serviceImpl)
+    public static grpc::ServerServiceDefinition BindService(FileSteamServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_PushFile, serviceImpl.PushFile).Build();

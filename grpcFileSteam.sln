@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "grpcFileSteam", "grpcFileSteam\grpcFileSteam.csproj", "{F19D865D-322C-4BDA-BA0C-B4001F73056F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSteamGRPC", "FileSteamGRPC\FileSteamGRPC.csproj", "{C64BC982-D895-4591-B653-75056F2B89C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSteamServer", "FileSteamServer\FileSteamServer.csproj", "{D2D48A74-15AD-4CCD-B900-626F12F3EEF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F19D865D-322C-4BDA-BA0C-B4001F73056F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F19D865D-322C-4BDA-BA0C-B4001F73056F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F19D865D-322C-4BDA-BA0C-B4001F73056F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F19D865D-322C-4BDA-BA0C-B4001F73056F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C64BC982-D895-4591-B653-75056F2B89C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C64BC982-D895-4591-B653-75056F2B89C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C64BC982-D895-4591-B653-75056F2B89C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C64BC982-D895-4591-B653-75056F2B89C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2D48A74-15AD-4CCD-B900-626F12F3EEF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2D48A74-15AD-4CCD-B900-626F12F3EEF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2D48A74-15AD-4CCD-B900-626F12F3EEF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2D48A74-15AD-4CCD-B900-626F12F3EEF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
