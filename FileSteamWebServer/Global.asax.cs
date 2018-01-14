@@ -27,5 +27,10 @@ namespace FileSteamWebServer
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             server.Start();
         }
+
+        protected void Application_End(object sender, EventArgs e)
+        {
+            server.ShutdownAsync().Wait();
+        }
     }
 }
